@@ -1,0 +1,8 @@
+.name-input{
+    padding: 8px 16px;
+    height: 40px;
+    min-width: 360px;
+    color: #2E2F42;
+    border-radius: 4px;
+border: 1px solid #808080;
+}
