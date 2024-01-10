@@ -18,7 +18,7 @@ buttonCreate.addEventListener(`click`, function(){
     return;
   }
 
-  boxes.innerHTML = '';
+
 
   let size = 30;
       for (let i = 0; i < inputValue; i++) {
@@ -31,10 +31,11 @@ buttonCreate.addEventListener(`click`, function(){
 
         size += 10;
       }
-      inputValue.value = '';
+      inputNum.value = '';
 
 });
 
 buttonDestroy.addEventListener('click', function() {
   boxes.innerHTML = '';
+  inputNum.reset();
 });
