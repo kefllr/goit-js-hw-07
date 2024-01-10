@@ -9,6 +9,8 @@ const buttonDestroy = document.querySelector(`.button-destroy`);
 const inputNum = document.querySelector(`.input-num`);
 const boxes = document.querySelector(`.boxes`)
 
+const fragment = document.createDocumentFragment()
+
 buttonCreate.addEventListener(`click`, function(){
 
   const inputValue = parseInt(inputNum.value, 10);
@@ -27,15 +29,17 @@ buttonCreate.addEventListener(`click`, function(){
         box.style.width = `${size}px`;
         box.style.height = `${size}px`;
         box.style.backgroundColor = getRandomHexColor();
-        boxes.appendChild(box);
+        fragment.appendChild(box);
 
         size += 10;
+        
       }
+      boxes.append(fragment);
       inputNum.value = '';
-
+      
 });
 
 buttonDestroy.addEventListener('click', function() {
   boxes.innerHTML = '';
-  inputNum.reset();
+  inputNum.value = '';
 });
